@@ -1,0 +1,79 @@
+<script type="text/javascript">// <![CDATA[
+function dosearch() { var sf=document.searchform; var submitto = sf.sengines.value + escape(sf.searchterms.value); window.open(submitto); return false; }
+// ]]></script>
+
+<script type="text/javascript">// <![CDATA[
+function dosearchebook() { var sf=document.searchformebook; var submitto = sf.sengines.value + escape(sf.searchterms.value); window.open(submitto); return false; }
+// ]]></script>
+
+<script type="text/javascript">// <![CDATA[
+function dosearcharticle() { var sf=document.searchformarticle; var submitto = sf.sengines.value + escape(sf.searchterms.value); window.open(submitto); return false; }
+// ]]></script>
+
+<script type="text/javascript">// <![CDATA[
+function dosearchuptodate() { var sf=document.searchformuptodate; var submitto = sf.sengines.value + escape(sf.searchterms.value); window.open(submitto); return false; }
+// ]]></script>
+
+<script type="text/javascript">// <![CDATA[
+function dosearchevidence() { var sf=document.searchformevidence; var submitto = sf.sengines.options[sf.sengines.selectedIndex].value + escape(sf.searchterms.value); window.open(submitto); return false; }
+// ]]></script>
+
+<script type="text/javascript">// <![CDATA[
+function dosearchjournals() { var sf=document.searchformjournals; var submitto = sf.sengines.options[sf.sengines.selectedIndex].value + escape(sf.searchterms.value); window.open(submitto); return false; }
+// ]]></script>
+
+<h3>Library OmniSearch</h3>
+
+Select a tab to search your chosen resource type. Check out our <a href="https://www.library.sath.nhs.uk/wp-content/uploads/2021/01/OmniSearch-Guide.pdf">guide</a> for more information on using OmniSearch.
+
+[tabby title="Books and articles"]
+
+<form name="searchform" onsubmit="return dosearch();">Search for books, e-books or articles<input size=100% type="text" name="searchterms" id="searchtermbook" placeholder="Enter your keyword(s)" onchange="(document.getElementById('searchtermebook').value = this.value, document.getElementById('searchtermarticle').value = this.value, document.getElementById('searchtermuptodate').value = this.value, document.getElementById('searchtermevidence').value = this.value, document.getElementById('searchtermjournals').value = this.value);"/><input name="sengines" type="hidden" value="https://shelib.on.worldcat.org/search?sortKey=LIBRARY&databaseList=&changedFacet=year&overrideStickyFacetDefault=&stickyFacetsChecked=on&selectSortKey=LIBRARY&overrideGroupVariant=&overrideGroupVariantValue=&scope=&format=all&year=all&yearFrom=2011&yearTo=2020&author=all&database=all&topic=all&language=all&queryString=" /><input name="SearchSubmit" type="submit" value="Search" onClick="ga('send', 'event', 'OmniSearch', 'Books');" /><p>To access our online resources, an <a href="https://library.sath.nhs.uk/services/athens/" target="_blank" rel="noopener noreferrer">NHS OpenAthens account</a> is required. Access will vary depending on the organisation you are affiliated to<p>Search the resources of <a href="https://libguides.staffs.ac.uk/libraryresources" target="_blank" rel="noopener noreferrer">Staffordshire</a> and <a href="https://www.keele.ac.uk/library/" target="_blank" rel="noopener noreferrer">Keele</a> Universities</a><p><a href="http://library.sath.nhs.uk/find/books/" target="_blank" rel="noopener noreferrer">Finding and borrowing print books</a> | <a href="http://library.sath.nhs.uk/ebooks/" target="_blank" rel="noopener noreferrer">Finding and using e-books</a> | <a href="http://library.sath.nhs.uk/find/databases/" target="_blank" rel="noopener noreferrer">Advanced searches for articles</a> | <a href="http://library.sath.nhs.uk/requests/search/" target="_blank" rel="noopener noreferrer">Request an evidence search</a></form>
+
+[tabby title="Books"]
+
+<form name="searchformebook" onsubmit="return dosearchebook();">Search for books and e-books<input size=100% type="text" name="searchterms" id="searchtermebook" placeholder="Enter your keyword(s)" autofocus onchange="(document.getElementById('searchtermbook').value = this.value, document.getElementById('searchtermarticle').value = this.value, document.getElementById('searchtermuptodate').value = this.value, document.getElementById('searchtermevidence').value = this.value, 
+document.getElementById('searchtermjournals').value = this.value);"/><input name="sengines" type="hidden" value="https://shelib.on.worldcat.org/search?sortKey=LIBRARY&databaseList=&changedFacet=format&overrideStickyFacetDefault=&stickyFacetsChecked=on&selectSortKey=LIBRARY&overrideGroupVariant=&overrideGroupVariantValue=&scope=&format=Book&year=all&yearFrom=&yearTo=&author=all&database=all&topic=all&language=all&queryString="/><input name="SearchSubmit" type="submit" value="Search" onClick="ga('send', 'event', 'OmniSearch', 'E-Books');" /><p>To access our online resources, an <a href="https://library.sath.nhs.uk/services/athens/" target="_blank" rel="noopener noreferrer">NHS OpenAthens account</a> is required. Access will vary depending on the organisation you are affiliated to<p>Search the resources of <a href="https://libguides.staffs.ac.uk/libraryresources" target="_blank" rel="noopener noreferrer">Staffordshire</a> and <a href="https://www.keele.ac.uk/library/" target="_blank" rel="noopener noreferrer">Keele</a> Universities</a><p><a href="http://library.sath.nhs.uk/find/books/" target="_blank" rel="noopener noreferrer">Finding and borrowing print books</a> | <a href="http://library.sath.nhs.uk/ebooks/" target="_blank" rel="noopener noreferrer">Finding and using e-books</a></form>
+
+[tabby title="Articles"]
+
+<form name="searchformarticle" onsubmit="return dosearcharticle();">Search for journal articles<input size=100% type="text" name="searchterms" id="searchtermarticle" placeholder="Enter your keyword(s)" onchange="(document.getElementById('searchtermbook').value = this.value, document.getElementById('searchtermebook').value = this.value, document.getElementById('searchtermuptodate').value = this.value, document.getElementById('searchtermevidence').value = this.value,
+document.getElementById('searchtermjournals').value = this.value);"/><input name="sengines" type="hidden" value="https://shelib.on.worldcat.org/search?sortKey=LIBRARY&databaseList=&changedFacet=format&overrideStickyFacetDefault=&stickyFacetsChecked=on&selectSortKey=RECENCY&overrideGroupVariant=&overrideGroupVariantValue=&scope=&format=Artchap&subformat=Artchap%3A%3Aartchap_artcl&subformat=Artchap%3A%3Aartchap_digital&subformat=Artchap%3A%3Aartchap_chptr&subformat=Artchap%3A%3Aartchap_mss&year=all&yearFrom=&yearTo=&author=all&database=all&language=all&queryString="/><input type="submit" value="Search" onClick="ga('send', 'event', 'OmniSearch', 'Articles');"/><p>To access our online resources, an <a href="https://library.sath.nhs.uk/services/athens/" target="_blank" rel="noopener noreferrer">NHS OpenAthens account</a> is required. Access will vary depending on the organisation you are affiliated to<p>Search the resources of <a href="https://libguides.staffs.ac.uk/libraryresources" target="_blank" rel="noopener noreferrer">Staffordshire</a> and <a href="https://www.keele.ac.uk/library/" target="_blank" rel="noopener noreferrer">Keele</a> Universities</a><p><a href="http://library.sath.nhs.uk/find/databases/" target="_blank" rel="noopener noreferrer">Advanced searches for articles</a> | <a href="http://library.sath.nhs.uk/requests/search/" target="_blank" rel="noopener noreferrer">Request an evidence search</a></form>
+
+[tabby title="UpToDate"]
+
+<form name="searchformuptodate" onsubmit="return dosearchuptodate();">Search over 10,000 continuously updated evidence summaries<input size=100% type="text" name="searchterms" id="searchtermuptodate" placeholder="Enter your keyword(s)" onchange="(document.getElementById('searchtermbook').value = this.value, document.getElementById('searchtermebook').value = this.value, document.getElementById('searchtermarticle').value = this.value, 
+document.getElementById('searchtermevidence').value = this.value, document.getElementById('searchtermjournals').value = this.value);"/><input name="sengines" type="hidden" value="https://www.uptodate.com/contents/search?search=" /><input type="submit" value="Search" onClick="ga('send', 'event', 'OmniSearch', 'UpToDate');" /><p>This search form will only work on a SaTH PC. For off-site access (available to SaTH staff and students only) visit <a href="https://www.uptodate.com/contents/search/">UpToDate</a> and login with an <a href="https://library.sath.nhs.uk/services/athens/" target="_blank" rel="noopener noreferrer">NHS OpenAthens account</a>.</form>
+
+[tabby title="Evidence"]
+
+<form name="searchformevidence" onsubmit="return dosearchevidence();">Choose from NICE Evidence, TRIP Database, Cochrane Library, BMJ Best Practice or the BNF/BNFc<input size=100% type="text" name="searchterms" id="searchtermevidence" placeholder="Enter your keyword(s)" onchange="(document.getElementById('searchtermbook').value = this.value, document.getElementById('searchtermebook').value = this.value, document.getElementById('searchtermarticle').value = this.value, document.getElementById('searchtermuptodate').value = this.value, document.getElementById('searchtermjournals').value = this.value);" />
+<select name="sengines" style="width:350px;">
+<option selected="selected" value="http://www.evidence.nhs.uk/Search?q=">NICE Evidence</option>
+<option value="http://www.tripdatabase.com/search?criteria=">TRIP Database</option>
+<option value="https://www.cochranelibrary.com/search?p_p_id=scolarissearchresultsportlet_WAR_scolarissearchresults&p_p_lifecycle=0&_scolarissearchresultsportlet_WAR_scolarissearchresults_searchType=basic&_scolarissearchresultsportlet_WAR_scolarissearchresults_searchBy=1&_scolarissearchresultsportlet_WAR_scolarissearchresults_searchText=">Cochrane Library</option>
+<option value="https://bestpractice.bmj.com/search?q=">BMJ Best Practice</option>
+<option value="http://www.evidence.nhs.uk/Search?om=[{%22srn%22:[%22British%20National%20Formulary%20-%20BNF%22]},{%22srn%22:[%22British%20National%20Formulary%20for%20Children%20-%20BNFc%22]}]&q=" />British National Formulary / BNF for Children</option>
+</select><input name="SearchSubmit" type="submit" value="Search" onClick="ga('send', 'event', 'OmniSearch', 'Evidence');" />&nbsp;<p>NICE Evidence and TRIP Database both cover a range of evidence resources, such as clinical practice guidelines, systematic reviews, evidence synopses and much more. TRIP also searches some primary research resources such as evidence-based journal articles.
+
+Access to TRIP Pro is available on NHS PCs
+
+For more evidence resources, visit the <a href="http://www.library.sath.nhs.uk/find/" target="_blank" rel="noopener noreferrer">Knowledge Navigator</a>
+
+<p>For more medicines information resources, visit the <a class="expandall" href="https://www.library.sath.nhs.uk/find/#medicinelink" target="_blank" rel="noopener noreferrer">Knowledge Navigator</a>
+
+Download the BNF/BNFC app for <a href="https://play.google.com/store/apps/details?id=com.pharmpress.bnf&hl=en_GB" target="_blank" rel="noopener noreferrer">Android</a> | <a href="https://itunes.apple.com/gb/app/bnf-publications/id1045514038?mt=8" target="_blank" rel="noopener noreferrer">Apple</a>
+
+</form>
+
+[tabby title="Journals"]
+
+<form name="searchformjournals" onsubmit="return dosearchjournals();">Type a journal name and select your organisation to check what access you have to full-text<input size=100% type="text" name="searchterms" id="searchtermjournals" placeholder="Enter a journal title" onchange="(document.getElementById('searchtermbook').value = this.value, document.getElementById('searchtermebook').value = this.value, document.getElementById('searchtermarticle').value = this.value, document.getElementById('searchtermuptodate').value = this.value, document.getElementById('searchtermevidence').value = this.value);" />
+<select name="sengines" required="required" style="width:400px;">
+<option value="https://5195558.odslr.com/discover/results?fct=SubClassification~journal~Journal%7cIsFullTextAvailable~true~Full+text+available&spell=False&q=">Shrewsbury and Telford Hospital NHS Trust</option>
+<option value="https://5195560.odslr.com/discover/results?fct=SubClassification~journal~Journal%7cIsFullTextAvailable~true~Full+text+available&spell=False&q=">Shropshire Community Health NHS Trust</option>
+<option value="https://5195561.odslr.com/discover/results?fct=SubClassification~journal~Journal%7cIsFullTextAvailable~true~Full+text+available&spell=False&q=">GPs, Practice Staff and CCG Staff in Shropshire</option>
+<option value="http://rh5pp9fz2b.search.serialssolutions.com/?V=1.0&N=100&L=RH5PP9FZ2B&S=AC_T_B&C=">Staffordshire University</option>
+<option value="http://sfxhosted.exlibrisgroup.com/keele/az/?param_textSearchType_value=contains&param_pattern_value=">Keele University</option>
+</select><input name="SearchSubmit" type="submit" value="Search" onClick="ga('send', 'event', 'OmniSearch', 'Journals');" /><p>To access NHS journals, an <a href="https://library.sath.nhs.uk/services/athens/" target="_blank" rel="noopener noreferrer">OpenAthens</a> account is required. If the journal you need is not available, you can request articles using our <a href="https://www.library.sath.nhs.uk/requests/article/" target="_blank" rel="noopener noreferrer">Article Request service</a>.</form>
+[tabbyending]
